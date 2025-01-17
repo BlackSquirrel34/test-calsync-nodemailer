@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/src/components/navbar";
-import { Toaster } from "@/src/components/ui/toaster";
+import { UIToaster } from "@/src/components/ui/toaster";
+import { Toaster } from 'react-hot-toast';
 import { auth } from "@/auth";
 import { headers } from "next/headers";
 
@@ -44,6 +45,7 @@ export default async function RootLayout({
         <div className="min-h-screen pt-20 flex flex-col">
         {children}
         </div>
+        <UIToaster />
         <Toaster />
       </body>
     </html>
